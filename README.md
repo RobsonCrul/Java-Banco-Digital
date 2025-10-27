@@ -59,10 +59,12 @@ O projeto também faz uso da API Collections, permitindo ordenar, buscar ou filt
 
 Exemplo de ordenação:
 
-    Collections.sort(contas, Comparator.comparing(Conta::getSaldo).reversed());
+    public Collection<Conta> listarContas(){
+        return List.copyOf(contas.values());
+    }
 
 
-Isso ordena as contas pelo saldo de forma decrescente.
+Isso ordena as contas pelo saldo de forma crescente.
 
 🔹 5. Uso de Exceptions
 
